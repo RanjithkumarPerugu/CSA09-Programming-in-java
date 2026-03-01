@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class LoanEligibility {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter age: ");
+        int age = sc.nextInt();
+
+        System.out.print("Enter salary: ");
+        int salary = sc.nextInt();
+
+        System.out.print("Enter CIBIL score: ");
+        int cibil = sc.nextInt();
+
+        if (age >= 21) {
+            if (salary >= 25000) {
+                if (cibil >= 700)
+                    System.out.println("Loan Approved");
+                else
+                    System.out.println("Loan Rejected: Low CIBIL Score");
+            } else {
+                System.out.println("Loan Rejected: Low Salary");
+            }
+        } else {
+            System.out.println("Loan Rejected: Age below 21");
+        }
+    }
+}
