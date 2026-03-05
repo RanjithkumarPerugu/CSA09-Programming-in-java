@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class LargestMatrix {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int r,c;
+
+        System.out.print("Enter rows: ");
+        r = sc.nextInt();
+
+        System.out.print("Enter columns: ");
+        c = sc.nextInt();
+
+        int matrix[][] = new int[r][c];
+        int largest = Integer.MIN_VALUE;
+
+        System.out.println("Enter matrix elements:");
+
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                matrix[i][j] = sc.nextInt();
+
+                if(matrix[i][j] > largest){
+                    largest = matrix[i][j];
+                }
+            }
+        }
+
+        System.out.println("Largest element: " + largest);
+    }
+}
